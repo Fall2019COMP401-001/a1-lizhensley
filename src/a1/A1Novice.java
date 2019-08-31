@@ -18,7 +18,7 @@ public class A1Novice {
 			String lastName = scan.next();
 			int numItems = scan.nextInt();
 			
-			Double total = 0.0;
+			Double total = 0.00;
 			
 			for (int j = 0; j < numItems; j++) {
 				
