@@ -18,12 +18,12 @@ public class A1Novice {
 			String lastName = scan.next();
 			int numItems = scan.nextInt();
 			
-			Double total = 0.00;
+			Double total = 0.0;
 			
 			for (int j = 0; j < numItems; j++) {
 				
 				int quantity = scan.nextInt();
-				String itemName = scan.next();
+				scan.next();
 				Double price = scan.nextDouble();
 				total += price * quantity;
 				
@@ -32,6 +32,8 @@ public class A1Novice {
 			System.out.println(firstName.charAt(0) + ". " + lastName + ": " + String.format("%.2f", total));
 			
 		}
+		
+		scan.close();
 		
 	}
 }
