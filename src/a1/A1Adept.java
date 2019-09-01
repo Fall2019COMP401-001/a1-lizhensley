@@ -36,19 +36,18 @@ public class A1Adept {
 			
 			for (int j = 0; j < itemsBought; j++) {
 				
-				int quantity = scan.nextInt();
+				Double quantity = scan.nextDouble();
 				String itemBoughtName = scan.next();
 				
 				for (int k = 0; k < inventory.length; k++) {
-					if (inventory[k] == itemBoughtName) {
+					if (inventory[k].equals(itemBoughtName)) {
 						total += prices[k] * quantity;
+						
 					}
 				}
-				
 			}
 			
 			totals[i] = total;
-			
 		}
 		
 		Double sum = 0.0;
@@ -57,7 +56,7 @@ public class A1Adept {
 			sum += totals[i];
 		}
 		
-		Double currentMin = 0.0;
+		Double currentMin = totals[0];
 		int minIndex = 0;
 		
 		for (int i = 1; i < totals.length; i++) {
@@ -67,7 +66,7 @@ public class A1Adept {
 			}
 		}
 		
-		Double currentMax = 0.0;
+		Double currentMax = totals[0];
 		int maxIndex = 0;
 		
 		for (int i = 1; i < totals.length; i++) {
